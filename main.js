@@ -28,7 +28,7 @@ scene.add( directionalLight );
 // HDRI environment map
 const hdrLoader = new RGBELoader();
 // const rgbeLoader = new RGBELoader();
-hdrLoader.load('assets/hdri/studio_env.hdr', (texture) => {
+hdrLoader.load('./assets/hdri/studio_env.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
 
     scene.environment = texture;
@@ -66,7 +66,7 @@ resize();
 
 // Load the model
 loader.load( 
-    'assets/models/chair_2.glb', ( gltf ) => {
+    './assets/models/chair_2.glb', ( gltf ) => {
         const model = gltf.scene;
 
         // Center the model
@@ -162,22 +162,22 @@ function loadTexture(path, isColor = true) {
 }
 
 const textures = {
-    fabric: loadTexture('assets/textures/Fabric/Fabric_001_basecolor_2.jpg'),
-    fabricNormal: loadTexture('assets/textures/Fabric/Fabric_001_normal.jpg', false),
-    fabricRoughness: loadTexture('assets/textures/Fabric/Fabric_001_roughness_2.jpg', false),
+    fabric: loadTexture('./assets/textures/Fabric/Fabric_001_basecolor_2.jpg'),
+    fabricNormal: loadTexture('./assets/textures/Fabric/Fabric_001_normal.jpg', false),
+    fabricRoughness: loadTexture('./assets/textures/Fabric/Fabric_001_roughness_2.jpg', false),
 
-    fabric2: loadTexture('assets/textures/Fabric/Fabric_002_basecolor_2.jpg'),
-    fabric2Normal: loadTexture('assets/textures/Fabric/Fabric_002_normal.jpg', false),
-    fabric2Roughness: loadTexture('assets/textures/Fabric/Fabric_002_roughness.jpg', false),
-    fabric2Displacement: loadTexture('assets/textures/Fabric/Fabric_002_displacement.jpg', false),
+    fabric2: loadTexture('./assets/textures/Fabric/Fabric_002_basecolor_2.jpg'),
+    fabric2Normal: loadTexture('./assets/textures/Fabric/Fabric_002_normal.jpg', false),
+    fabric2Roughness: loadTexture('./assets/textures/Fabric/Fabric_002_roughness.jpg', false),
+    fabric2Displacement: loadTexture('./assets/textures/Fabric/Fabric_002_displacement.jpg', false),
 
-    metal: loadTexture('assets/textures/Metal/Metal_001_basecolor_2.jpg'),
-    metalNormal: loadTexture('assets/textures/Metal/Metal_001_normal.jpg', false),
-    metalRoughness: loadTexture('assets/textures/Metal/Metal_001_roughness_2.jpg', false),
+    metal: loadTexture('./assets/textures/Metal/Metal_001_basecolor_2.jpg'),
+    metalNormal: loadTexture('./assets/textures/Metal/Metal_001_normal.jpg', false),
+    metalRoughness: loadTexture('./assets/textures/Metal/Metal_001_roughness_2.jpg', false),
 
-    wood: loadTexture('assets/textures/Wood/Wood_001_basecolor.jpg'),
-    woodNormal: loadTexture('assets/textures/Wood/Wood_001_normal.jpg', false),
-    woodRoughness: loadTexture('assets/textures/Wood/Wood_001_roughness_2.jpg', false),
+    wood: loadTexture('./assets/textures/Wood/Wood_001_basecolor.jpg'),
+    woodNormal: loadTexture('./assets/textures/Wood/Wood_001_normal.jpg', false),
+    woodRoughness: loadTexture('./assets/textures/Wood/Wood_001_roughness_2.jpg', false),
 
     
 };
