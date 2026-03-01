@@ -1,0 +1,157 @@
+:root {
+    --ui-bg: rgba(255, 255, 255, 0.8);
+    color: #738bff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars */
+    font-family: 'Inter', sans-serif; /* A clean modern font */
+}
+
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.glass-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensures it stays above the canvas */
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #222;
+}
+
+.brand p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.author {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #444;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+/* Main content */
+.mat-btn, .color-btn {
+    transition: all 0.2s ease;
+    outline: none;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Indented style */
+.mat-btn.active, .color-btn.active {
+    transform: scale(0.92); /* Slightly shrinks to look pushed in */
+    border-color: #666; /* Darker border to show depth */
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.5), /* Inner shadow for indentation */
+        inset -2px -2px 5px rgba(255, 255, 255, 0.2); 
+    filter: brightness(0.9); /* Slightly dims the "pushed" button */
+}
+
+.color-btn.active {
+    box-shadow: 
+        0 0 0 2px rgba(255, 255, 255, 0.8), 
+        inset 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.mat-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-position: center;
+    overflow: hidden;
+}
+
+.mat-btn.active, .color-btn.active {
+    transform: scale(0.92); 
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.4), 
+        inset -2px -2px 5px rgba(255, 255, 255, 0.2); 
+    filter: brightness(0.9);
+}
+
+.mat-btn:hover:not(.active), .color-btn:hover:not(.active) {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Individual Texture Images */
+.wood-preview { background-image: url('assets/textures/Wood/Wood_001.png'); }
+.metal-preview { background-image: url('assets/textures/Metal/Metal_001.png'); }
+.fabric-preview { background-image: url('assets/textures/Fabric/Fabric_001.png'); }
+.fabric2-preview { background-image: url('assets/textures/Fabric/Fabric_002_2.png'); }
+
+/* ------------------------ */
+
+.controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* The "Glass" effect */
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.control-group span {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#canvas-container canvas {
+    cursor: grab; /* Shows an open hand */
+}
+
+#canvas-container canvas:active {
+    cursor: grabbing; /* Shows a closed fist when clicking/dragging */
+}
