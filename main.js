@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+import { HDRLoader } from 'three/examples/jsm/loaders/HDRLoader.js';
 
 // ------------------------
 
@@ -26,8 +26,7 @@ directionalLight.position.set( 5, 10, 7.5 );
 scene.add( directionalLight );
 
 // HDRI environment map
-const hdrLoader = new RGBELoader();
-// const rgbeLoader = new RGBELoader();
+const hdrLoader = new HDRLoader();
 hdrLoader.load('./assets/hdri/studio_env.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
 
