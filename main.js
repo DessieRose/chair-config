@@ -161,22 +161,22 @@ function loadTexture(path, isColor = true) {
 }
 
 const textures = {
-    fabric: loadTexture('./textures/Fabric/Fabric_001_basecolor_2.jpg'),
-    fabricNormal: loadTexture('./textures/Fabric/Fabric_001_normal.jpg', false),
-    fabricRoughness: loadTexture('./textures/Fabric/Fabric_001_roughness_2.jpg', false),
+    fabric: loadTexture('./assets/textures/Fabric/Fabric_001_basecolor_2.jpg'),
+    fabricNormal: loadTexture('./assets/textures/Fabric/Fabric_001_normal.jpg', false),
+    fabricRoughness: loadTexture('./assets/textures/Fabric/Fabric_001_roughness_2.jpg', false),
 
-    fabric2: loadTexture('./textures/Fabric/Fabric_002_basecolor_2.jpg'),
-    fabric2Normal: loadTexture('./textures/Fabric/Fabric_002_normal.jpg', false),
-    fabric2Roughness: loadTexture('./textures/Fabric/Fabric_002_roughness.jpg', false),
-    fabric2Displacement: loadTexture('./textures/Fabric/Fabric_002_displacement.jpg', false),
+    fabric2: loadTexture('./assets/textures/Fabric/Fabric_002_basecolor_2.jpg'),
+    fabric2Normal: loadTexture('./assets/textures/Fabric/Fabric_002_normal.jpg', false),
+    fabric2Roughness: loadTexture('./assets/textures/Fabric/Fabric_002_roughness.jpg', false),
+    fabric2Displacement: loadTexture('./assets/textures/Fabric/Fabric_002_displacement.jpg', false),
 
-    metal: loadTexture('./textures/Metal/Metal_001_basecolor_2.jpg'),
-    metalNormal: loadTexture('./textures/Metal/Metal_001_normal.jpg', false),
-    metalRoughness: loadTexture('./textures/Metal/Metal_001_roughness_2.jpg', false),
+    metal: loadTexture('./assets/textures/Metal/Metal_001_basecolor_2.jpg'),
+    metalNormal: loadTexture('./assets/textures/Metal/Metal_001_normal.jpg', false),
+    metalRoughness: loadTexture('./assets/textures/Metal/Metal_001_roughness_2.jpg', false),
 
-    wood: loadTexture('./textures/Wood/Wood_001_basecolor.jpg'),
-    woodNormal: loadTexture('./textures/Wood/Wood_001_normal.jpg', false),
-    woodRoughness: loadTexture('./textures/Wood/Wood_001_roughness_2.jpg', false),
+    wood: loadTexture('./assets/textures/Wood/Wood_001_basecolor.jpg'),
+    woodNormal: loadTexture('./assets/textures/Wood/Wood_001_normal.jpg', false),
+    woodRoughness: loadTexture('./assets/textures/Wood/Wood_001_roughness_2.jpg', false),
 
     
 };

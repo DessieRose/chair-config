@@ -114,10 +114,10 @@ body, html {
 }
 
 /* Individual Texture Images */
-.wood-preview { background-image: url('./assets/textures/Wood/Wood_001.png'); }
-.metal-preview { background-image: url('./assets/textures/Metal/Metal_001.png'); }
-.fabric-preview { background-image: url('./assets/textures/Fabric/Fabric_001.png'); }
-.fabric2-preview { background-image: url('./assets/textures/Fabric/Fabric_002_2.png'); }
+.wood-preview { background-image: url('./public/assets/textures/Wood/Wood_001.png'); }
+.metal-preview { background-image: url('./public/assets/textures/Metal/Metal_001.png'); }
+.fabric-preview { background-image: url('./public/assets/textures/Fabric/Fabric_001.png'); }
+.fabric2-preview { background-image: url('./public/assets/textures/Fabric/Fabric_002_2.png'); }
 
 /* ------------------------ */
 
