@@ -181,20 +181,14 @@ body, html {
 
     .controls {
         bottom: 10px;
-        left: 10px;
-        right: 10px;
-        width: auto;
-        max-width: none;
         padding: 12px;
-        flex-wrap: wrap;
-        gap: 10px;
     }
 
     .control-group {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         flex: 1;
         min-width: 100px;
     }
@@ -205,7 +199,7 @@ body, html {
     }
 
     .color-btn, .mat-btn {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
     }
 }
