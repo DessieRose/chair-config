@@ -155,3 +155,105 @@ body, html {
 #canvas-container canvas:active {
     cursor: grabbing; /* Shows a closed fist when clicking/dragging */
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .glass-header {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    .brand h1 {
+        font-size: 1.1rem;
+    }
+
+    .brand p {
+        font-size: 0.65rem;
+    }
+
+    .author {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+
+    .controls {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+        padding: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .control-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .control-group span {
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+
+    .color-btn, .mat-btn {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-header {
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        padding: 8px 12px;
+    }
+
+    .brand h1 {
+        font-size: 1rem;
+    }
+
+    .brand p {
+        font-size: 0.6rem;
+    }
+
+    .author {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+
+    .controls {
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .control-group {
+        gap: 6px;
+        min-width: 80px;
+    }
+
+    .control-group span {
+        font-size: 9px;
+    }
+
+    .color-btn, .mat-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mat-btn:hover:not(.active), .color-btn:hover:not(.active) {
+        transform: scale(1.05); /* Less aggressive hover scale on mobile */
+    }
+}
